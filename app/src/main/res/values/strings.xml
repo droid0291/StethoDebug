@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RealmSamples</string>
+    <string name="str_name_label">Name</string>
+    <string name="str_name_hint">Enter Name</string>
+    <string name="str_age_label">Age</string>
+    <string name="str_age_hint">Enter Age</string>
+    <string name="str_save">Save</string>
+    <string name="str_check_box_pref">Preference Checkbox</string>
+</resources>

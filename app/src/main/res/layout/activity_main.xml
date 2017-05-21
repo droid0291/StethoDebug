@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.droidfactory.skp.realmsamples.MainActivity">
+    tools:context="com.droidfactory.skp.realmsamples.view.MainActivity">
 
     <LinearLayout
         android:id="@+id/ll_name"
@@ -66,4 +66,12 @@
         android:checked="false"
         android:onClick="updatePref"
         android:text="@string/str_check_box_pref"/>
+
+    <Button
+        android:id="@+id/btn_movie_service_call"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="callMovieListScreen"
+        android:text="@string/str_test_service_calls"/>
 </LinearLayout>

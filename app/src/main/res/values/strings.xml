@@ -6,4 +6,5 @@
     <string name="str_age_hint">Enter Age</string>
     <string name="str_save">Save</string>
     <string name="str_check_box_pref">Preference Checkbox</string>
+    <string name="str_test_service_calls">Test Service Calls</string>
 </resources>

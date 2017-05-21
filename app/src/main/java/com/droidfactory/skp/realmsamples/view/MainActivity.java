@@ -1,5 +1,6 @@
-package com.droidfactory.skp.realmsamples;
+package com.droidfactory.skp.realmsamples.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,12 +8,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import com.droidfactory.skp.realmsamples.R;
 import com.droidfactory.skp.realmsamples.db.User;
 import com.droidfactory.skp.realmsamples.pref.SharedPrefUtils;
+import com.droidfactory.skp.realmsamples.view.movie.TopRatedMovieListActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import io.realm.Realm;
 
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.check_box_pref)
     CheckBox checkBoxPref;
+
+    @BindView(R.id.btn_movie_service_call)
+    Button btnTestServiceCall;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,5 +72,11 @@ public class MainActivity extends AppCompatActivity {
         SharedPrefUtils.updatePreferenceValue(MainActivity.this,
                 SharedPrefUtils.CHECK_BOX_PREF,
                 !currentPrefValue);
+    }
+
+    @OnClick(R.id.btn_movie_service_call)
+    public void callMovieListScreen(View view) {
+        Intent intent = new Intent(this, TopRatedMovieListActivity.class);
+        startActivity(intent);
     }
 }
